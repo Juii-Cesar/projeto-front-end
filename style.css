@@ -3,6 +3,7 @@ body{
     margin-left: 30px;
 }
 
+
 .busca{
     float: left;
     background-color: rgb(255, 255, 255);
@@ -40,9 +41,6 @@ body{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
     font-size: 13px ;
     color: #545454;
-    margin-right: 1px;
-}
-
-#acessibilidade{
-    float: right;
+    
+    
 }
