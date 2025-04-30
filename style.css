@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
 *{
    margin: 0; 
    padding: 0;
@@ -11,18 +13,27 @@ body{
 
 .menu-principal{
     display: flex;
-    
+    justify-content: space-between;
 }
 
+.menu-principal__pesquisa-home-login{
+    display: flex;
+}
+
+.menu-principal__carrinho-acessibilidade{
+    display: flex;
+    align-items: center ;
+}
 #casa-img{
-    width: 35px;
+    width: 48px;
+    height: 48px;
 }
 
 .barra-busca{
     margin-left: 2px;
     border-radius: 15px;
     border: solid 2px;
-    width: 300px;
+    width: 395px;
 }
 
 #txt-buscar{
@@ -30,15 +41,16 @@ body{
     float: left;
     border: none;
     font-style: italic;
-    font-size: 18px;
-    width: 260px;
+    font-size: 24px;
+    width: 355px;
     padding-left: 5px;
-    height: 34px;
+    height: 45px;
 }
 
 #lupa-img{
-    height: 35;
+    height: 30px;
     margin-top: 5px;
+    margin-right: 5px;
 }
 
 .area-login{
@@ -48,18 +60,32 @@ body{
 }
 
 #txt-login{
+    width: 205px;
+    height: 19px;
+    font-size: 16px;
+    font-family: "Inter", sans-serif;
     color: #545454 ;
 }
 
 #perfil-img{
     flex-grow: 4;
-    width: 40px;
-    height: 40px;
+    width: 48px;
+    height: 48px;
     margin-right:3px ;
 }
 
+
+
 #carrinho-img{
-    margin-left: 700px;
-    width: 35px;
+    width: 48px;
+    height: 48px;
     margin-right: 5px;
+}
+
+#txt-acessibilidade{
+    width: 159px;
+    height: 36px;
+    font-size: 20px;
+    font-family: "Inter", sans-serif;
+
 }
