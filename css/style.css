@@ -26,18 +26,18 @@ body{
 
 .menu-principal__carrinho-acessibilidade{
     display: flex;
-    align-items: center ;
+    align-items: center;
 }
 #casa-img{
-    width: 48px;
-    height: 48px;
+    width: 30px;
+    height: 34px;
 }
 
 .barra-busca{
     margin-left: 2px;
     border-radius: 15px;
-    border: solid 2px;
-    width: 395px;
+    border: solid 2px #000000;
+    width: 335px;
 }
 
 #txt-buscar{
@@ -45,15 +45,16 @@ body{
     float: left;
     border: none;
     font-style: italic;
-    font-size: 24px;
-    width: 355px;
+    font-size: 20px;
+    width: 300px;
     padding-left: 5px;
-    height: 45px;
+    height: 27px;
+    outline: none;
 }
 
 #lupa-img{
-    height: 30px;
-    margin-top: 5px;
+    height: 20px;
+    margin-top: 3px;
     margin-right: 5px;
 }
 
@@ -65,31 +66,31 @@ body{
 
 #txt-login{
     width: 205px;
-    height: 19px;
-    font-size: 16px;
+    height: 5px;
+    font-size: 13px;
     font-family: "Inter", sans-serif;
-    color: #545454 ;
+    color: #424242 ;
 }
 
 #perfil-img{
     flex-grow: 4;
-    width: 48px;
-    height: 48px;
+    width: 34px;
+    height: 34px;
     margin-right:3px ;
 }
 
 
 
 #carrinho-img{
-    width: 48px;
-    height: 48px;
+    width: 28px;
+    height: 34px;
     margin-right: 5px;
 }
 
 #txt-acessibilidade{
     width: 159px;
-    height: 36px;
-    font-size: 20px;
+    height: 30px;
+    font-size: 15px;
     font-family: "Inter", sans-serif;
 
 }
@@ -99,7 +100,7 @@ body{
     margin-top: 10px;
     margin-left: 40px;
     margin-right: 40px;
-    height: 64px;
+    height: 44px;
     
 
 }
@@ -116,10 +117,10 @@ body{
 
 .submenus nav ul li a{
     color: #fff;
-    padding: 20px 40px;
+    padding: 11.5px 40px;
     text-decoration: none;
-    font-size: 20px;
-    font-weight: 600;
+    font-size: 18px;
+    font-weight: 500;
     display: block;
     transition: .2s;
     font-family: "Inter", sans-serif;
@@ -146,9 +147,9 @@ body{
 }
 
 .submenus__pai .submenus__produtos a{
-    padding: 20px;
+    padding: 15px;
 }
 
 .submenus__pai:hover .submenus__produtos{
-    height: 512px;
+    height: 408.4px;
 }
