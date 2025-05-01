@@ -6,29 +6,66 @@
     <title>Projeto front-end</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 <body>
-    <header class="menu-principal">
-        <section class="menu-principal__pesquisa-home-login">
-            <img id="casa-img" src="Home.svg" alt="home" usemap="#home">
-            <div class="barra-busca">
-                <input id="txt-buscar" type="text" placeholder="buscar">
-                <img id="lupa-img" src="lupa.png" alt="lupa-pesquisa">
-            </div>
-            <div class="area-login">
-                <img id="perfil-img" src="perfil.svg" alt="perfil">
-                <p id="txt-login">olá seja bem vindo <br> entre ou cadastre-se</p>
-            </div>
-        </section>
-        <section class="menu-principal__carrinho-acessibilidade">
-            <img id="carrinho-img" src="carrinho.svg" alt="carrinho compras">
-            <p id="txt-acessibilidade">acessibilidade</p>
-            <label>
-                <input type="checkbox">
-            </label>
+
+    <header>
+        <div class="menu-principal">
+            <section class="menu-principal__pesquisa-home-login">
+                <a href="#">
+                    <img id="casa-img" src="Home.svg" alt="home" usemap="#home">
+                </a>
+                <div class="barra-busca">
+                    <input id="txt-buscar" type="text" placeholder="buscar">
+                    <img id="lupa-img" src="lupa.png" alt="lupa-pesquisa">
+                </div>
+                <div class="area-login">
+                    <a href="#">
+                        <img id="perfil-img" src="perfil.svg" alt="perfil">
+                    </a>
+                    <p id="txt-login">olá seja bem vindo <br> entre ou cadastre-se</p>
+                </div>
+            </section>
+            <section class="menu-principal__carrinho-acessibilidade">
+                <a href="#">
+                    <img id="carrinho-img" src="carrinho.svg" alt="carrinho compras">
+                </a>
+                <p id="txt-acessibilidade">acessibilidade</p>
+                <label>
+                    <input type="checkbox">
+                </label>
+            </section>
+        </div>
+
+        <section class="submenus">
+            
+            <nav>
+                <ul class="submenus__todos">
+                    <section class="submenus__esquerda">
+                        <li><a href="#">produtos</a></li>
+                        <li class="submenus__pai"><a href="#">ofertas <i class="bi bi-caret-down-fill"></i></a>
+                            <div class="submenus__produtos">
+                                <a href="#">alface</a>
+                                <a href="#">alho</a>
+                                <a href="#">melancia</a>
+                                <a href="#">uva</a>
+                                <a href="#">tomate</a>
+                                <a href="#">maça</a>
+                                <a href="#">limão</a>
+                                <a href="#">banana</a>
+                            </div>
+                        </li>
+                    </section>
+                    <li><a href="#">deixe seu feedback</a></li>
+                </ul>
+            </nav>
+                
+            
         </section>
     </header>
-    <main></main>
+    <main>
+    </main>
     <footer></footer>
 </body>
 </html>
