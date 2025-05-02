@@ -64,6 +64,10 @@ body{
     margin-right: 5px;
 }
 
+.area-login a{
+    color: #424242;
+}
+
 #txt-login{
     width: 205px;
     height: 5px;
