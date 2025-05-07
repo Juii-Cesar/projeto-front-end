@@ -6,7 +6,7 @@
 }
 
 body{
-    height: 100vh;
+    
     box-sizing: border-box;
     color: #1B4218;
 }
@@ -156,4 +156,13 @@ body{
 
 .submenus__pai:hover .submenus__produtos{
     height: 408.4px;
+}
+
+.painel{
+    display: flex;
+    justify-content: center;
+}
+
+.painel__img{
+    width: 95.8%;
 }
