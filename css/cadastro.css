@@ -171,3 +171,13 @@ body {
     justify-content: space-between;
     margin-top: 30px;
 }
+.home-but img {
+    position: absolute;
+    width: 36px;
+    margin-top: -90px;
+    margin-left: -20px;
+    background-color: #fff;
+    border-radius: 10px;
+    
+    
+    }

@@ -107,3 +107,12 @@ transition: 0.2s;
 .link-de-registro a:hover {
     text-decoration: underline;
 }
+.home-but img {
+position: absolute;
+width: 30px;
+margin-left: -25px;
+margin-top: -20px;
+background-color: #fff;
+border-radius: 10px;
+
+}
