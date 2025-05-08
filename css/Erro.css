@@ -29,6 +29,14 @@ body {
     text-align: center;
     margin-left: 25px;
     
-
 }
+.home-but img {
+    position: absolute;
+    width: 3%;
+    margin-left: -405px;
+    margin-top: -20px;
+    background-color: #fff;
+    border-radius: 10px;
+    
+    }
 

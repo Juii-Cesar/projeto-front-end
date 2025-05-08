@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 155vh;
+    background-color: rgb(74, 122, 74);
+    background-size: cover;
+    background-position: center;
+
+}
+
+.container{
+    width: 560px;
+    height: 400px;
+    background-color: rgb(22, 86, 22);
+    border: 2px solid rgba(215, 215, 215, 0.2);
+    border-radius: 10px;
+    color: #fff;
+    margin-top: -550px;
+    box-shadow: 0px 4px 10px rgb(0, 0, 0 , 0.1);
+    text-align: center;
+}
+
+
+textarea {
+    width: 80%;
+    height: 110px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 20px;
+    padding: 10px;
+    
+}
+
+button {
+    width: 240px;
+    padding: 10px;
+    margin-top: 20px;
+    background-color: #fff;
+    font-size: 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+
+}
+button:hover{
+    background: #06811ad8;
+    transition: 0.5s;
+}
+
+.estrelinhas{
+    display: flex;
+    text-align: center;
+    justify-content: left;
+    flex-direction: row-reverse;
+    font-size: 35px;
+    margin-left: 50px;
+    margin-top: 20px;
+}
+
+.estrelinhas input {
+    display: none;
+}
+
+.estrelinhas label {
+    color: #ccc;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.estrelinhas input:checked ~ label,
+.estrelinhas label:hover,
+.estrelinhas label:hover ~ label {
+    color: gold;
+}
+
+.home-but img {
+    position: absolute;
+    width: 40px;
+    margin-left: -35px;
+    margin-top: -40px;
+    background-color: #ffffffc5 ;
+    border-radius: 10px;
+    
+}
