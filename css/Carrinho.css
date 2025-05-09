@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   
+}  
+
+body{
+    font-family: "Inter", sans-serif;
+    background-color: #4A7A4A;
+    
+}
+
+.car-org{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #CFFFCF;
+    border-radius: 20px;
+    width: 90%;
+    margin-right: 1000px;
+    margin-left: 100px; 
+    margin-top: 50px;
+}
+
+
+.cabecalho-carrinho__titulo-carrinho{
+    text-align: center;
+    font-size: 20px;
+    font-style: none;
+    color: #f6f6f6;
+    background-color: #014D1A; 
+    padding: 23px 824px;
+    border-radius: 15px;
+   
+}
+
+.carrinho {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #CFFFCF;
+    width: 100%;
+    margin-right: 1000px;
+    margin-left: 100px;
+}
+
+.carrinho__status-do-carrinho__imagem{ 
+    width: 258px;
+    height: 258px;
+    margin-top: 20px;
+    margin-left: 210px;
+}
+
+.btn-compra-desativado{
+    background-color: #1f6135;
+    color: #f6f6f65e;
+    font-size: 20px;
+    font-weight: 700;
+    width: 200px;
+    height: 50px;
+    padding: 10px 10px;
+    border-radius: 10px;
+    margin-top: 225px;
+    margin-bottom: 75px;
+    margin-left: 120px;
+    margin-right: 50px;
+    text-decoration: none;
+}
+
+.btn-compra-ativado{
+    background-color: #003813;
+    color: #f6f6f6;
+    font-size: 20px;
+    font-weight: 700;
+    padding: 10px 10px;
+    border-radius: 10px;
+    margin-top: 225px;
+    margin-bottom: 75px;
+    margin-left: 120px;
+    margin-right: 50px;
+    text-decoration: none;
+}
+
+.btn-limpar-desativado{
+    background-color: #801010;
+    color: #f6f6f65e;
+    font-size: 20px;
+    font-weight: 700;
+    width: 200px;
+    height: 50px;
+    padding: 10px 10px;
+    border-radius: 10px;
+    margin-top: 225px;
+    margin-bottom: 75px;
+    margin-left: 50px;
+    text-decoration: none;
+}
+
+.btn-limpar-ativado{
+    background-color: #ff0000;
+    color: #f6f6f6;
+    font-size: 20px;
+    font-weight: 700;
+    width: 200px;
+    height: 50px;
+    padding: 10px 10px;
+    border-radius: 10px;
+    margin-top: 225px;
+    margin-bottom: 75px;
+    margin-left: 50px;
+    text-decoration: none;
+}
+
+.carrinho__msg-carrinho-vazio__texto{   
+    font-size: 20px;
+    font-weight: 700;
+    color: #003612;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.carrinho__status-do-carrinho__txt{
+    font-size: 20px;
+    font-weight: 700;
+    color: #003612;
+    margin-top: 20px;
+    text-align: center;
+}
+.botões{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+.car-org__cabecalho-carrinho{
+text-align: left;
+}
+
+.home-but img {
+position: absolute;
+width: 50px;
+background-color: #fff;
+border-radius: 10px;
+
+}
