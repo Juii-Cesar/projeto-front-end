@@ -24,17 +24,24 @@ body{
     margin-top: 50px;
 }
 
+.car-org__cabecalho-carrinho{
+    display: flex;
+    background-color: #003612;
+    gap: 4.5%;
+
+}
 
 .cabecalho-carrinho__titulo-carrinho{
     text-align: center;
     font-size: 20px;
     font-style: none;
     color: #f6f6f6;
-    background-color: #014D1A; 
+    
     padding: 23px 824px;
     border-radius: 15px;
    
 }
+
 
 .carrinho {
     display: flex;
@@ -142,7 +149,7 @@ text-align: left;
 .home-but img {
 position: absolute;
 width: 50px;
-background-color: #fff;
 border-radius: 10px;
+margin: 0.5% 1%;
 
 }
