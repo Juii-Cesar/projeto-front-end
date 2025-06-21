@@ -4,10 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/Carrinho.css">
+    <link rel="stylesheet" href="/css/modo-escuro.css">
+    <link rel="stylesheet" href="/css/acessibilidade.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="acessibilidade.js"></script>
+    <script src="script.js"></script>
     <title>Carrinho de Compras</title>
 </head>
 <body>
+    <div class="accessibility-container">
+    <button id="accessibilityBtn" class="accessibility-button" title="Abrir opções de acessibilidade" aria-haspopup="true" aria-expanded="false" aria-controls="accessibilityPanel">
+      A
+    </button>
+    <section id="accessibilityPanel" class="accessibility-panel" role="region" aria-label="Painel de acessibilidade" aria-hidden="true" tabindex="-1">
+      <div class="panel-header">
+        <h2 class="panel-title">Acessibilidade</h2>
+        <button id="closePanel" class="close-button" aria-label="Fechar painel">×</button>
+      </div>
+      <div class="font-control">
+        <label for="fontSlider" class="control-label">Tamanho da fonte</label>
+        <div class="slider-container">
+          <input id="fontSlider" class="font-slider" type="range" min="80" max="130" step="1" value="100" />
+          <span id="fontSizeDisplay" class="font-size-display" aria-live="polite" aria-atomic="true">100%</span>
+        </div>
+      </div>
+      <button id="resetFont" class="reset-button">Redefinir tamanho</button>
+    </section>
+  </div>
+
         <header class="car-org__cabecalho-carrinho">
             <div class="home-but">
                 <a href="index.html">
@@ -15,8 +40,12 @@
                 </a>
                 </div>
             <p class="cabecalho-carrinho__titulo-carrinho">Meu Carrinho</p>
+            <div id="trilho" class="trilho">
+                  <div class="indicador"></div>
+                </div>
         </header>
     <section class="car-org">
+
         
         <main>
             <section class="car-org__carrinho">

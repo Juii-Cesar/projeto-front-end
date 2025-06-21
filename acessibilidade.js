@@ -72,7 +72,7 @@
 
       function updateFontSize(value) {
         const fontSize = parseInt(value);
-        const textElements = $("p, h1, h2, h3, h4, h5, h6, a, span, li, label, button");
+        const textElements = $("p, h1, h2, h3, h4, h5, h6, a, span, li, label, button").not(".ignore-font-resize");
 
         textElements.each(function () {
           $(this).css("font-size", fontSize + "%");

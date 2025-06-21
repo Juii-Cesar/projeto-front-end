@@ -1,9 +1,6 @@
-/* Seu CSS (ajustado para contexto completo) */
-
-
   .accessibility-container {
       position: fixed;
-      top: 20px;
+      top: 13%;
       right: 20px;
       z-index: 1000;
   }

@@ -111,7 +111,7 @@ body{
 }
 
 #home-icon{
-    font-size: 210%;
+    font-size: 210% !important;
     color: #1B4218;
     user-select: none;
     cursor: pointer;
@@ -220,7 +220,7 @@ body.dark #perfil-icon{
 }
 
 #carrinho-icon{
-    font-size: 210%;
+    font-size: 210% !important;
     color: #1B4218;
     
 }
@@ -260,7 +260,7 @@ body.dark .submenus{
     color: #fff;
     padding: 11.5px 40px;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 18px !important; 
     font-weight: 500;
     display: block;
     transition: .2s;
