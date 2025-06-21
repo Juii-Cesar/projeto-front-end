@@ -1,0 +1,214 @@
+/* Seu CSS (ajustado para contexto completo) */
+
+
+  .accessibility-container {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 1000;
+  }
+
+  .accessibility-button {
+      background: #007bff;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      font-size: 24px;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+
+  .accessibility-button:hover {
+      background: #0056b3;
+      transform: scale(1.1);
+      box-shadow: 0 6px 20px rgba(0, 123, 255, 0.4);
+  }
+
+  .accessibility-panel {
+      position: absolute;
+      top: 70px;
+      right: 0;
+      background: white;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+      border: 1px solid #e9ecef;
+      min-width: 280px;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-10px);
+      transition: all 0.3s ease;
+  }
+
+  .accessibility-panel.active {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+  }
+
+  .panel-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid #f8f9fa;
+  }
+
+  .panel-title {
+      font-size: 18px;
+      font-weight: bold;
+      color: #333;
+      margin: 0;
+  }
+
+  .close-button {
+      background: none;
+      border: none;
+      font-size: 20px;
+      cursor: pointer;
+      color: #6c757d;
+      padding: 0;
+      width: 30px;
+      height: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 4px;
+      transition: all 0.2s ease;
+  }
+
+  .close-button:hover {
+      background: #f8f9fa;
+      color: #333;
+  }
+
+  .font-control {
+      margin-bottom: 20px;
+  }
+
+  .control-label {
+      display: block;
+      font-size: 14px;
+      font-weight: 600;
+      color: #495057;
+      margin-bottom: 10px;
+  }
+
+  .slider-container {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+  }
+
+  .font-slider {
+      flex: 1;
+      -webkit-appearance: none;
+      appearance: none;
+      height: 6px;
+      background: #e9ecef;
+      border-radius: 3px;
+      outline: none;
+      transition: background 0.3s ease;
+      cursor: pointer;
+  }
+
+  .font-slider::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 20px;
+      height: 20px;
+      background: #007bff;
+      border-radius: 50%;
+      cursor: pointer;
+      box-shadow: 0 2px 6px rgba(0, 123, 255, 0.3);
+      transition: all 0.2s ease;
+  }
+
+  .font-slider::-webkit-slider-thumb:hover {
+      background: #0056b3;
+      transform: scale(1.1);
+      box-shadow: 0 3px 10px rgba(0, 123, 255, 0.4);
+  }
+
+  .font-slider::-moz-range-thumb {
+      width: 20px;
+      height: 20px;
+      background: #007bff;
+      border-radius: 50%;
+      cursor: pointer;
+      border: none;
+      box-shadow: 0 2px 6px rgba(0, 123, 255, 0.3);
+  }
+
+  .font-size-display {
+      background: #f8f9fa;
+      padding: 8px 12px;
+      border-radius: 6px;
+      font-size: 14px;
+      font-weight: 600;
+      color: #495057;
+      min-width: 50px;
+      text-align: center;
+      border: 1px solid #e9ecef;
+      user-select: none;
+      transition: transform 0.2s ease;
+  }
+
+  .reset-button {
+      width: 100%;
+      background: #6c757d;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 6px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.3s ease, transform 0.2s ease;
+  }
+
+  .reset-button:hover {
+      background: #5a6268;
+  }
+
+  /* Animação para o botão */
+  @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+  }
+
+  .accessibility-button.pulse {
+      animation: pulse 2s infinite;
+  }
+
+  /* Responsividade */
+  @media (max-width: 768px) {
+      .accessibility-container {
+          top: 10px;
+          right: 10px;
+      }
+      
+      .accessibility-button {
+          width: 50px;
+          height: 50px;
+          font-size: 20px;
+      }
+      
+      .accessibility-panel {
+          min-width: 250px;
+          right: -10px;
+      }
+  }
+
+  /* Transição global para fonte */
+  * {
+    transition: font-size 0.3s ease !important;
+  }
