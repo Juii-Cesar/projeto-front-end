@@ -302,7 +302,7 @@ $(document).ready(function(){
         processarLogin();
     });
     
- 
+    
     if (document.getElementById('cep')) {
         document.getElementById('cep').addEventListener('blur', (e) => {
             buscarEndereco(e.target.value);
@@ -328,3 +328,30 @@ $(document).ready(function(){
     verificarUsuarioLogado();
     
 });
+function botaoSair(){
+    if(localStorage.getItem("usuarioLogado")){
+       $("#txt-login").css({"display":"none"});
+       // $("#btn-sair").css({"display":"block"});
+    }else{
+       $("#txt-login").css({"display":"block"});
+       $("#btn-sair").css({"display":"none"});
+    }
+}
+botaoSair()
+
+$(document).ready(function(){
+    $("#btn-sair").click(function(){
+        $("#modal-sair").css({"display":"flex"});
+    })
+
+    $("#negar-sair").click(function(){
+         $("#modal-sair").css({"display":"none"});
+    })
+
+    $("#confirmar-sair").click(function(){
+        $("#modal-sair").css({"display":"none"});
+        localStorage.removeItem("usuarioLogado");
+        botaoSair()
+    })
+})
+

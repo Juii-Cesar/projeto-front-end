@@ -26,6 +26,7 @@
                     <a href="Login.html">
                         <i id="perfil-icon" class="bi bi-person-circle"></i>
                     </a>
+                    <p id="btn-sair" class="btn-sair">SAIR</p>
                     <p id="txt-login">olá seja bem vindo <br> entre ou <a href="Cadastro.html">cadastre-se</a></p>
                 </div>
             </section>
@@ -66,6 +67,14 @@
         </section>
     </header>
     <main>
+      <div id="modal-sair" class="modal-sair">
+        <div id="modal-conteudo" class="modal-conteudo">
+          <p>Você realmente deseja sair da conta?</p>
+          <section class="opcao-sair" >
+            <p id="confirmar-sair">Sair</p> <p id="negar-sair">Não</p>
+          </section>
+        </div>
+      </div>
         <section class="painel">
             <img class="painel__img" src="imgs/painel.svg" alt="painel hortifruti">
         </section>
@@ -916,5 +925,6 @@
     </main>
     <footer></footer>
 <script src="script.js"></script>
+<script src="local-storage.js"></script>
 </body>
 </html>
