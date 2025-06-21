@@ -27,8 +27,8 @@
 }
 
 body.dark .modal-conteudo{
-    background-color:#3b413de7 ;
-    border: solid 1px #2d302e;
+    background-color:#3b413dec ;
+    border: solid 1px #0f0f0f;
 }
 
 .modal-conteudo p{
@@ -194,7 +194,7 @@ body.dark #txt-login{
     color: #fff;
     font-family: "Roboto", sans-serif;
     background-color: #961616;
-    padding: 1% 6%;
+    padding: 1% 8%;
     border-radius: 50px;
     user-select: none;
     cursor: pointer;
@@ -204,7 +204,7 @@ body.dark #txt-login{
 
 .btn-sair:hover{
     background-color: #be1e1e;
-    padding: 1.8% 6.2%;
+    padding: 1.8% 8.2%;
     font-size: 132%;
     
 }

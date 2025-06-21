@@ -25,6 +25,10 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, .2);
 }
 
+body.dark .container{
+    background-color: #245D32;
+}
+
 .container h1 {
     font-size: 40px;
     text-align: center;
@@ -53,6 +57,19 @@ body {
     color: #000;
 }
 
+body.dark .input-box input{
+    background-color: #313331;
+    border: 1px solid #1f1f1f;
+    color: #626862;
+}
+
+body.dark .input-box select{
+    background-color:#313331 ;
+    border: 1px solid #1f1f1f;
+    color: #626862;
+}
+
+
 .input-box-duplo {
     display: flex;
     gap: 20px;
@@ -76,6 +93,18 @@ body {
     transition: background-color 0.3s ease;
 }
 
+body.dark .Cadastrar-se {
+    background-color:#313331;
+    color: #626862;
+    border: solid 1px #1f1f1f;
+}
+
+body.dark .limpar{
+    background-color:#313331;
+    color: #626862;
+    border: solid 1px #1f1f1f;
+}
+
 .Cadastrar-se:hover, .limpar:hover {
     background-color: #ddd;
 }
@@ -85,15 +114,36 @@ body {
     justify-content: space-between;
     margin-top: 30px;
 }
-.home-but img {
-    position: absolute;
-    width: 36px;
-    margin-top: -90px;
-    margin-left: -20px;
-    border-radius: 10px;
+
+.cabecalho{
+    display: flex;
+    flex-wrap: nowrap;
+    text-align: center;
+    align-content: flex-start;
+    gap: 29%;
+    
+}
+.cabecalho h1{
+    text-align: center;
+}
+.home-but{
+    display: flex;
+    gap: 8px;
+    flex-direction: row-reverse;
+    
+}
+.home-but #home-icon {
+    color: #fff;
+    font-size: 210%;
     
     
 }
+
+
+body.dark #home-icon{
+    color: #313331;
+}
+
 @media screen and (max-width: 768px) {
     
 }
