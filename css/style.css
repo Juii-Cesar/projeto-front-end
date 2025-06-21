@@ -152,7 +152,7 @@ body{
     position: absolute;
     background-color: #1B4218;
     width: 100%;
-    min-width: 200px;
+    min-width: 175px;
     height: 0;
     overflow: hidden;
     transition: .2s;
