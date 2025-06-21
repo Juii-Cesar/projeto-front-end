@@ -3,26 +3,168 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/cadastro.css">
+    <link rel="stylesheet" href="/css/cadastro.css">
     <title>Hortifruti: Cadastre-se!</title>
+    <style>
+       
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .modal-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .modal {
+            background: linear-gradient(135deg, rgb(22, 86, 22), rgb(30, 100, 30));
+            border-radius: 20px;
+            padding: 40px;
+            max-width: 450px;
+            width: 90%;
+            text-align: center;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            transform: scale(0.7) translateY(-50px);
+            transition: all 0.3s ease;
+            border: 2px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .modal-overlay.active .modal {
+            transform: scale(1) translateY(0);
+        }
+
+        .modal-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 20px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: bounce 0.6s ease-out;
+        }
+
+        .modal-icon svg {
+            width: 40px;
+            height: 40px;
+            fill: #fff;
+        }
+
+        .modal h2 {
+            color: #fff;
+            font-size: 28px;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+        .modal p {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 16px;
+            line-height: 1.5;
+            margin-bottom: 30px;
+        }
+
+        .modal-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+        }
+
+        .btn {
+            padding: 12px 30px;
+            border: none;
+            border-radius: 25px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            min-width: 120px;
+        }
+
+        .btn-primary {
+            background: #fff;
+            color: rgb(22, 86, 22);
+        }
+
+        .btn-primary:hover {
+            background: #f0f0f0;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: #fff;
+            border: 2px solid rgba(255, 255, 255, 0.5);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: #fff;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-10px);
+            }
+            60% {
+                transform: translateY(-5px);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .modal {
+                padding: 30px 20px;
+                margin: 20px;
+            }
+            
+            .modal h2 {
+                font-size: 24px;
+            }
+            
+            .modal-buttons {
+                flex-direction: column;
+            }
+            
+            .btn {
+                width: 100%;
+            }
+        }
+    </style>
 </head>
 <body>
     <main class="container">
-        <form>
+        <form id="form-cadastro">
             <h1>Cadastro na Toca das Frutas</h1>
             <div class="home-but">
-            <a href="index.html">
-                <img id="casa-img" src="imgs/white-Home.svg" alt="home" usemap="#home">
-            </a>
+                <a href="index.html">
+                    <img id="casa-img" src="imgs/white-Home.svg" alt="home">
+                </a>
             </div>
             <div class="input-box">
                 <label>Nome Completo</label>
-                <input required placeholder="Nome Completo" type="text">
+                <input id="nome" required placeholder="Nome Completo" type="text" title="O nome deve ter entre 15 e 80 letras.">
             </div>
 
             <div class="input-box">
                 <label>Data de Nascimento</label>
-                <input type="date">
+                <input id="dataNascimento" type="date">
             </div>
 
             <div class="input-box">
@@ -36,56 +178,95 @@
 
             <div class="input-box">
                 <label>Nome da Mãe</label>
-                <input required placeholder="Nome completo da mãe" type="text">
+                <input id="nomeMae" required placeholder="Nome completo da mãe" type="text" title="O nome deve ter entre 15 e 80 letras.">
             </div>
 
             <div class="input-box-duplo">
                 <div class="input-box">
                     <label>Senha</label>
-                    <input required placeholder="Senha" type="password">
+                    <input id="senha" required placeholder="Senha" type="password" title="A senha deve ter de 8 a 20 caracteres, incluindo pelo menos uma letra e um número.">
                 </div>
                 <div class="input-box">
                     <label>Confirmar Senha</label>
-                    <input required placeholder="Repetir senha" type="password">
+                    <input id="confirmaSenha" required placeholder="Repetir senha" type="password" title="Repita a senha corretamente.">
                 </div>
             </div>
 
             <div class="input-box">
                 <label>Email</label>
-                <input required placeholder="Email válido" type="email">
+                <input id="email" required placeholder="Email válido" type="email" title="Digite um email válido.">
             </div>
 
             <div class="input-box">
                 <label>CPF</label>
-                <input required placeholder="XXX.XXX.XXX-XX" type="text">
+                <input id="cpf" required placeholder="XXX.XXX.XXX-XX" type="text">
             </div>
 
             <div class="input-box-duplo">
                 <div class="input-box">
                     <label>Telefone</label>
-                    <input required placeholder="(XX)XXXXX-XXXX" type="text">
+                    <input id="telefone" required placeholder="(+55)XXXXX-XXXX" type="text">
                 </div>
                 <div class="input-box">
                     <label>Telefone Fixo</label>
-                    <input required placeholder="(XX)XXXXX-XXXX" type="text">
+                    <input id="telefoneFixo" placeholder="(+55)XXXXX-XXXX" type="text">
                 </div>
             </div>
 
             <div class="input-box">
                 <label>Endereço</label>
-                <input required placeholder="Endereço válido" type="text">
+                <input id="endereco" required placeholder="Endereço válido" type="text">
             </div>
 
             <div class="input-box">
                 <label>CEP</label>
-                <input required placeholder="XXX.XXX-XXX" type="text">
+                <input id="cep" required placeholder="XXXXX-XXX" type="text" title="Formato: XXXXX-XXX">
             </div>
 
+             <div class="input-box">
+                <label>Rua</label>
+                <input id="rua" required  type="text" >
+            </div>
+
+            <div class="input-box">
+                <label>Bairro</label>
+                <input id="bairro" required  type="text" >
+            </div>
+
+            <div class="input-box">
+                <label>Cidade</label>
+                <input id="cidade" required  type="text" >
+            </div>
+
+            <div class="input-box">
+                <label>Estado</label>
+                <input id="estado" required  type="text" >
+            </div>
+            
             <div class="botoes">
-                <button type="submit" class="Cadastrar-se">Enviar</button>
+                <button type="submit" class="Cadastrar-se" id="cadastro">Enviar</button>
                 <button type="reset" class="limpar">Limpar</button>
             </div>
         </form>
     </main>
+
+    <div id="modal-success" class="modal-overlay">
+        <div class="modal">
+            <div class="modal-icon">
+                <svg viewBox="0 0 24 24">
+                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
+                </svg>
+            </div>
+            <h2>Cadastro Realizado!</h2>
+            <p>Sua conta foi criada com sucesso. Você será redirecionado para a página de login em instantes.</p>
+            <div class="modal-buttons">
+                <button class="btn btn-primary" onclick="irParaLogin()">Ir para Login</button>
+                <button class="btn btn-secondary" onclick="fecharModal()">Fechar</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="local-storage.js"></script>
 </body>
 </html>

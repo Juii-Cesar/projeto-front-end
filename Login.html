@@ -8,37 +8,42 @@
 </head>
 <body>
     <main class="container">
-        <form>
+        <form id="form-login">
             <div class="home-but">
-            <a href="index.html">
-                <img id="casa-img" src="imgs/white-Home.svg" alt="home" usemap="#home">
-            </a>
+                <a href="index.html">
+                    <img id="casa-img" src="imgs/white-Home.svg" alt="home">
+                </a>
             </div>
             <h1>Login Toca das Frutas</h1>
+            <p id="mensagem-login" style="font-weight: bold;"></p>
+            
             <div class="input-box">
                 <img src="imgs/perfil2.svg" alt="perfil">
-                <input placeholder="Usuário" type="email">
-                <i class=""></i>
+                <input id="email-login" placeholder="Email" type="email" required>
             </div>
+            
             <div class="input-box">
-                <img src="imgs/Lock.svg" alt="cadeadio">
-                <input placeholder="Senha" type="password">
-                <i class=""></i>
+                <img src="imgs/Lock.svg" alt="cadeado">
+                <input id="senha-login" placeholder="Senha" type="password" required>
             </div>
+            
             <div class="lembrarsenha">
                 <label>
                     <input type="checkbox">
                     Lembrar da minha senha
                 </label>
-                <a href="#" style="color: rgb(36, 67, 12);"> Esqueci minha senha</a>
+                <a href="#" style="color: rgb(36, 67, 12);"> Esqueci minha senha </a>
             </div>
-            <button type="submit" class="login">Login </button>
+            
+            <button type="submit" class="login" id="Login">Login</button>
+            
             <div class="link-de-registro">
                 <p>Não tem uma conta? <a href="Cadastro.html" style="color: rgb(36, 67, 12)">Cadastre-se</a></p>
             </div>
-
         </form>
-
     </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="local-storage.js"></script>
 </body>
 </html>
