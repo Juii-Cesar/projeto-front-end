@@ -1,0 +1,42 @@
+body{
+    background-color:#7db186;
+    transition: .5s;
+}
+.trilho{
+    background-color:#5f8666;
+    width: 75px;
+    height: 35px;
+    border-radius: 35px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+}
+
+.trilho .indicador{
+    background-color: #fff;
+    height: 35px;
+    width: 35px;
+    transform: scale(.9);
+    border-radius: 50%;
+    user-select: none;
+    position: absolute;
+    left: 0;
+    transition: .5s;
+}
+
+.trilho.dark{
+    background-color: #245D32;
+}
+
+.trilho.dark .indicador{
+    background-color: #000;
+    left: 40px;
+}
+
+body.dark{
+    background-color:#3b413d ;
+    color: #245D32;;
+}
+
+
+

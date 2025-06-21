@@ -6,8 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projeto front-end</title>
     <link rel="stylesheet" href="css/style.css">
-    <script src="script.js"></script>
+    <link rel="stylesheet" href="css/modo-escuro.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 <body>
 
@@ -15,7 +16,7 @@
         <div class="menu-principal">
             <section class="menu-principal__pesquisa-home-login">
                 <a href="#">
-                    <img id="casa-img" src="imgs/Home.svg" alt="home" usemap="#home">
+                    <i id="home-icon" class="bi bi-house-fill"></i>
                 </a>
                 <div class="barra-busca">
                     <input id="txt-buscar" type="text" placeholder="buscar">
@@ -23,19 +24,18 @@
                 </div>
                 <div class="area-login">
                     <a href="Login.html">
-                        <img id="perfil-img" src="imgs/perfil.svg" alt="perfil">
+                        <i id="perfil-icon" class="bi bi-person-circle"></i>
                     </a>
                     <p id="txt-login">olá seja bem vindo <br> entre ou <a href="Cadastro.html">cadastre-se</a></p>
                 </div>
             </section>
             <section class="menu-principal__carrinho-acessibilidade">
                 <a href="Carrinho.html">
-                    <img id="carrinho-img" src="imgs/carrinho.svg" alt="carrinho compras">
+                    <i id="carrinho-icon" class="bi bi-cart4"></i>
                 </a>
-                <p id="txt-acessibilidade">acessibilidade</p>
-                <label>
-                    <input type="checkbox">
-                </label>
+                <div id="trilho" class="trilho">
+                  <div class="indicador"></div>
+                </div>
             </section>
         </div>
 
@@ -915,6 +915,6 @@
         </section>
     </main>
     <footer></footer>
-
+<script src="script.js"></script>
 </body>
 </html>

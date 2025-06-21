@@ -17,6 +17,7 @@ body{
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+    user-select: none;
 
 }
 
@@ -25,6 +26,7 @@ body{
     align-items: center;
     flex-wrap: wrap;
     gap: 10px;
+    user-select: none;
 }
 
 .menu-principal__carrinho-acessibilidade{
@@ -32,11 +34,20 @@ body{
     align-items: center;
     flex-wrap: wrap;
     gap: 10px;
+    user-select: none;
 }
 
-#casa-img{
-    width: 30px;
-    height: 34px;
+#home-icon{
+    font-size: 210%;
+    color: #1B4218;
+    user-select: none;
+    cursor: pointer;
+    user-select: none;
+
+}
+body.dark #home-icon{
+    color:#245D32;
+    user-select: none;
 }
 
 .barra-busca{
@@ -48,6 +59,9 @@ body{
     padding: 4px 10px;
     width: 335px;
     max-width: 100%;
+}
+body.dark .barra-busca{
+    border:solid 2px #fff ;
 }
 
 #txt-buscar{
@@ -65,6 +79,7 @@ body{
     height: 20px;
     margin-left: auto;
     flex-shrink: 0;
+    user-select: none;
 }
 
 .area-login{
@@ -75,10 +90,19 @@ body{
     gap: 8px;
     flex-wrap: wrap;
     max-width: 250px;
+    user-select: none;
 }
 
 .area-login a{
     color: #424242;
+}
+
+body.dark .area-login a{
+    color: #fff;
+}
+
+body.dark #txt-login{
+    color: #fff;
 }
 
 #txt-login{
@@ -89,22 +113,24 @@ body{
     line-height: 1.3;
 }
 
-#perfil-img{
-    width: 36px;
-    height: 36px;
+#perfil-icon{
+    font-size: 200%;
+    color: #1B4218;
     flex-shrink: 0;
 }
 
-#carrinho-img{
-    width: 28px;
-    height: 34px;
-    margin-right: 5px;
+body.dark #perfil-icon{
+    color: #245D32;
 }
 
-#txt-acessibilidade{
-    font-size: 15px;
-    font-family: "Inter", sans-serif;
+#carrinho-icon{
+    font-size: 210%;
+    color: #1B4218;
+    
+}
 
+body.dark #carrinho-icon{
+    color: #245D32;
 }
 
 .submenus{
@@ -112,6 +138,12 @@ body{
     margin-top: 10px;
     min-height: 44px;
     width: 100%;
+    user-select: none;
+}
+
+body.dark .submenus{
+    background-color: #245D32;
+    user-select: none;
 }
 
 .submenus__todos{
@@ -119,11 +151,13 @@ body{
     justify-content: space-between;
     list-style-type: none;
     flex-wrap: wrap;
+    user-select: none;
 }
 
 .submenus__esquerda{
     display: flex;
     flex-wrap: wrap;
+    user-select: none;
 }
 
 .submenus nav ul li a{
@@ -136,6 +170,7 @@ body{
     transition: .2s;
     font-family: "Inter", sans-serif;
     white-space: nowrap;
+    user-select: none;
 }
 
 .submenus nav ul li a:hover{
@@ -157,6 +192,11 @@ body{
     overflow: hidden;
     transition: .2s;
     z-index: 1000;
+}
+
+body.dark .submenus__pai .submenus__produtos{
+    background-color: #245D32;
+    transition: 0.5s;
 }
 
 .submenus__pai .submenus__produtos a{
@@ -225,6 +265,11 @@ body{
     border-radius: 12px;
     box-shadow: 4px 4px 6px #3a3939aa;
     flex-shrink: 0;
+    user-select: none;
+}
+
+body.dark .card{
+    background-color: #1c201b;
 }
 
 .card img {
@@ -233,6 +278,7 @@ body{
     border-top-left-radius: 12px;
     border-top-right-radius: 12px;
     object-fit: contain;
+    user-select: none;
     
 }
 
@@ -244,24 +290,32 @@ body{
     gap: 4px;
     height: 50%;
     padding: 8px;
+    user-select: none;
 }
 
 .card h1{
     font-size: 1.2rem;
     text-align: center;
     line-height: 1.2;
+    user-select: none;
 }
 
 .card h2 {
     font-size: 0.9rem;
     color: #aaaa;
     text-align: center;
+    user-select: none;
 }
 
 .card span {
     font-size: 1.1rem;
     font-weight: bold;
     color: #1B4218;
+    user-select: none;
+}
+
+body.dark .card span{
+    color: #245D32;
 }
 
 .card button {
@@ -278,7 +332,15 @@ body{
     transition: 0.4s;
 }
 
+body.dark .card button{
+    background-color: #245D32;
+}
+
 .card button:hover {
+    background-color: #1b9630;
+}
+
+body.dark .card button:hover{
     background-color: #1b9630;
 }
 
