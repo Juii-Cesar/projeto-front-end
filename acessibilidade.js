@@ -102,11 +102,10 @@
 
       function loadSavedSettings() {
         const savedFontSize = localStorage.getItem("accessibilityFontSize");
-        if (savedFontSize) {
-          $fontSlider.val(savedFontSize);
-          updateFontSize(savedFontSize);
+        if (savedFontSize && parseInt(savedFontSize) !== 100) {
+        $fontSlider.val(savedFontSize);
+        updateFontSize(savedFontSize);
         }
-
         if (!localStorage.getItem("accessibilityIntroShown")) {
           setTimeout(() => {
             $accessibilityBtn.addClass("pulse");
