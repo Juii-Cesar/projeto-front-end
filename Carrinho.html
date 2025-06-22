@@ -1,80 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/css/Carrinho.css">
-  <link rel="stylesheet" href="/css/modo-escuro.css">
-  <link rel="stylesheet" href="/css/acessibilidade.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script src="acessibilidade.js"></script>
-  <script src="script.js"></script>
-  <title>Carrinho de Compras</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/Carinho.css">
+    <link rel="stylesheet" href="css/modo-escuro.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
-
 <body>
-  <div class="accessibility-container">
-    <button id="accessibilityBtn" class="accessibility-button" title="Abrir opções de acessibilidade"
-      aria-haspopup="true" aria-expanded="false" aria-controls="accessibilityPanel">
-      A
-    </button>
-    <section id="accessibilityPanel" class="accessibility-panel" role="region" aria-label="Painel de acessibilidade"
-      aria-hidden="true" tabindex="-1">
-      <div class="panel-header">
-        <h2 class="panel-title">Acessibilidade</h2>
-        <button id="closePanel" class="close-button" aria-label="Fechar painel">×</button>
-      </div>
-      <div class="font-control">
-        <label for="fontSlider" class="control-label">Tamanho da fonte</label>
-        <div class="slider-container">
-          <input id="fontSlider" class="font-slider" type="range" min="80" max="130" step="1" value="100" />
-          <span id="fontSizeDisplay" class="font-size-display" aria-live="polite" aria-atomic="true">100%</span>
+    <header class="cabecalho">
+        <div class="botoes-menu" >
+            <a id="botao-home" href="index.html">
+                <i id="home-icon" class="bi bi-house-fill"></i>
+            </a>
+            <div class="trilho" id="trilho">
+                <div class="indicador"></div>
+            </div>
         </div>
-      </div>
-      <button id="resetFont" class="reset-button">Redefinir tamanho</button>
-    </section>
-  </div>
+        <h1>Meu carrinho</h1>
+        <div></div>
+    </header>
+    <div class="carrinho-content">
+        <div class="carrinho-opcoes">
+            <section id="stt-carrinho" class="stt-carrinho">
 
-  <header class="car-org__cabecalho-carrinho">
-    <div class="home-but">
-      <a href="index.html">
-        <img id="casa-img" src="imgs/white-Home.svg" alt="home" usemap="#home">
-      </a>
-    </div>
-    <p class="cabecalho-carrinho__titulo-carrinho ignore-font-resize">Meu Carrinho</p>
-
-    <div id="trilho" class="trilho">
-      <div class="indicador"></div>
-    </div>
-  </header>
-  <section class="car-org">
-
-
-    <main>
-      <section class="car-org__carrinho">
-        <section class="carrinho__status-do-carrinho">
-          <img class="carrinho__status-do-carrinho__imagem" src="/imgs/Melamcia triste.png"
-            alt="Foto de melancia triste">
-          <h2 class="carrinho__status-do-carrinho__txt">Seu carrinho está vazio</h2>
-        </section>
-        <section class="carrinho__msg-carrinho-vazio">
-          <p class="carrinho__msg-carrinho-vazio__texto"> Viaje entre as categorias. Existe uma grande variedades de
-            produtos</p>
-          <p class="carrinho__msg-carrinho-vazio__texto">Ou que tal usar a barra de pesquisas para achar seu produto</p>
-        </section>
-      </section>
-      <section class="botões">
-        <button disabled class="btn-compra-desativado"> Comprar </button>
-        <button disabled class="btn-limpar-desativado"> Limpar </button>
-      </section>
-  </section>
-  </main>
-
-  <footer>
-
-  </footer>
+                <img id="imagem-carinho-vazio" src="imgs/Melamcia triste.png" alt="imagem melancia triste">
+                <h2 id="texto-stt-carrinho">Seu carrinho ainda esta vazio!</h2>
+            </section>
+            <section class="botoes-carrinho">
+                <p class="btn-comprar" id="btn-comprar">comprar</p>
+                <p class="btn-limpar" id="btn-limpar">limpar</p>
+            </section>
+        </div>
+        </div>
+        <script src="script.js"></script>
 </body>
-
 </html>
