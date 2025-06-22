@@ -63,6 +63,29 @@ body.dark .carrinho-content{
     background-color: #245D32;
 }
 
+table {
+    width: 100%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    background-color: #fff;
+}
+
+thead {
+    background-color: #4CAF50;
+    color: white;
+}
+
+th, td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
 body .carrinho-content .carrinho-opcoes{
     display: flex;
     flex-direction: column;
