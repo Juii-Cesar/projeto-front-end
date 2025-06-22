@@ -207,5 +207,5 @@
 
   /* Transição global para fonte */
   * {
-    transition: font-size 0.3s ease !important;
+    transition: font-size 0.3s ease;
   }

@@ -1,6 +1,6 @@
 body{
     background-color:#7db186;
-    transition: .5s !important;
+    transition: .5s;
 }
 .trilho{
     background-color:#5f8666;
@@ -21,7 +21,7 @@ body{
     user-select: none;
     position: absolute;
     left: 0;
-    transition: .5s !important;
+    transition: .5s;
 }
 
 .trilho.dark{
