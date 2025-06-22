@@ -311,7 +311,7 @@ $(document).ready(function(){
     
     
     if (document.getElementById('modal-success')) {
-        // Fechar modal ao clicar fora dele
+       
         document.getElementById('modal-success').addEventListener('click', function(e) {
             if (e.target === this) {
                 fecharModal();

@@ -25,6 +25,7 @@ function adicionarCarrinho(quantidade, produto, precoUnitario) {
     };
 
     atualizarCarrinho();
+    mostrarFeedback();
 }
 function statusCarrinho(){
 
@@ -91,6 +92,16 @@ document.addEventListener('DOMContentLoaded', () => {
     // Você pode adicionar funcionalidade ao botão "comprar" aqui também, se quiser
 });
 
+function mostrarModalCompra() {
+    const modal = document.getElementById('modal-success');
+
+    // Troca o conteúdo do modal para contexto de compra
+    modal.querySelector('h2').innerText = "Compra realizada!";
+    modal.querySelector('p').innerText = "Obrigado pela sua compra! Você será redirecionado em instantes.";
+
+    modal.classList.add('active');
+}
+
 $(document).ready(function(){
     $("#btn-limpar").click(function(){
         localStorage.removeItem('carrinho');
@@ -99,10 +110,51 @@ $(document).ready(function(){
         
     })
      $("#btn-comprar").click(function(){
-        localStorage.removeItem('carrinho');
-        $("#carrinho-ativo").css({"display":"none"})
-        $("#stt-carrinho").css({"display":"block"})
-        alert('compra realizada com sucesso!')
+
+        const carrinhoAtual = JSON.parse(localStorage.getItem('carrinho')) ;
+        if (carrinhoAtual && localStorage.getItem("usuarioLogado")) {
+
+            localStorage.removeItem('carrinho');
+            $("#carrinho-ativo").css({"display":"none"})
+            $("#stt-carrinho").css({"display":"block"})
+            mostrarModalCompra();
+        }
+        else {
+            mostrarModalErro();
+        }
+
+        
     })
 })
+    function mostrarFeedback() {
+        const toast = document.getElementById('feedback-toast');
+        toast.classList.remove('show');
+        void toast.offsetWidth;
+        toast.classList.add('show');
+         setTimeout(() => {
+        toast.classList.remove('show');
+    }, 2000);
+}
+function irParaIndex() {
+    const modal = document.getElementById('modal-success');
+    modal.classList.remove('active');   
+    
+    setTimeout(() => {
+        window.location.href = "index.html";
+    }, 300);
+}   
+function mostrarModalErro() {
+    const modal = document.getElementById('modal-falha');
+
+    // Troca o conteúdo do modal para contexto de compra
+    modal.querySelector('h2').innerText = "Erro!";
+    modal.querySelector('p').innerText = "Certifique-se de estar cadastrado e ter o carrinho preenchido.";
+
+    modal.classList.add('active');
+} 
+function fecharModal() {
+    document.querySelectorAll('.modal-overlay.active').forEach(modal => {
+        modal.classList.remove('active');
+    });
+}  
  statusCarrinho()

@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="css/Carinho.css">
     <link rel="stylesheet" href="css/modo-escuro.css">
+    <link rel="stylesheet" href="/css/modal.css">
+    <script src="local-storage.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 <body>
@@ -26,7 +28,6 @@
         <div class="carrinho-opcoes">
             <section id="carrinho-ativo" class="carrinho-ativo">
                 <div>
-                    <h1>carrinho atual</h1>
                      <table id="tabela-carrinho">
             <thead>
                 <tr>
@@ -54,5 +55,37 @@
         </div>
         <script src="script.js"></script>
         <script src="carrinho.js"></script>
+
+<div id="modal-success" class="modal-overlay">
+        <div class="modal">
+            <div class="modal-icon">
+                <svg viewBox="0 0 24 24">
+                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
+                </svg>
+            </div>
+            <h2>Compra Confirmada!</h2>
+            <p>Compra realizada com sucesso!</p>
+            <div class="modal-buttons">
+                <button class="btn btn-primary" onclick="irParaIndex()">Ir para o inicio</button>
+                <button class="btn btn-secondary" onclick="fecharModal()">Fechar</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-falha" class="modal-overlay">
+        <div class="modal2">
+            <div class="modal-icon">
+                <svg viewBox="0 0 24 24">
+                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
+                </svg>
+            </div>
+            <h2>ERRO!</h2>
+            <p>Certifique-se de estar cadastrado e preencher o carrinho!</p>
+            <div class="modal-buttons">
+                <button class="btn btn-primary" onclick="irParaIndex()">Ir para o inicio</button>
+                <button class="btn btn-secondary" onclick="fecharModal()">Fechar</button>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
